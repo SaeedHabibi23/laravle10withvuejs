@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
-    return view('app');
-})
-->name('application');
+    return view('welcome');
+});
+
+// Route::get('/', function () {
+//     return view('app');
+// })
+// ->name('application');
 
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('{path}', [HomeController::class, 'index'])->where('path' , '([A-z\d\-\/_.]+)?');
