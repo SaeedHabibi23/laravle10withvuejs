@@ -1,4 +1,5 @@
 <template>
+// The bootstrap link inline import to the welcome blade file
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
